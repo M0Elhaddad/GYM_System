@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 
 namespace GYM_BLL.InterFace
 {
-    public interface IGenericRepository<T> where T : BaseEntity
+    public interface IGenericRepository<T>:IDisposable where T : BaseEntity
     {
         IEnumerable<T> GetAll(int id);
-        T GetById(int id);
+        T? Get(int id);
         int Update(T entity);
         int Delete(T entity);
         int Add(T entity);
-
-
-
     }
 }

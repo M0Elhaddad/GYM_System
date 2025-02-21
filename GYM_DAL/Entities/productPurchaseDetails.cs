@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GYM_DAL.Entities
 {
-    public class productPurchaseDetails
+    public class productPurchaseDetails:BaseEntity
     {
         public int ProductId { get; set; }
         public int PurchaseInvoiceId { get; set; }

@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.;Database=GYMSystem;TrustServerCertificate=True;Trusted_Connection=True;"
+  }
+  
+}

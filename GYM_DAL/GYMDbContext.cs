@@ -1,5 +1,6 @@
 ﻿using GYM_DAL.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,11 @@ namespace GYM_DAL
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=GYMSystem;TrustServerCertificate=True;Trusted_Connection=True;");
+            var configuration = new ConfigurationBuilder()
+                .AddJsonFile("appsetting.json")
+                .Build();
+            string? connectString = configuration.GetConnectionString("DefaultConnection");
+            optionsBuilder.UseSqlServer(connectString);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

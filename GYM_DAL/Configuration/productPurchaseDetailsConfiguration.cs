@@ -20,7 +20,6 @@ namespace GYM_DAL.Configuration
                 .WithMany(P => P.PurchaseproductDetails)
                 .HasForeignKey(PP => PP.PurchaseInvoiceId);
 
-            builder.HasKey(PP => new {PP.ProductId, PP.PurchaseInvoiceId});
 
 
         }

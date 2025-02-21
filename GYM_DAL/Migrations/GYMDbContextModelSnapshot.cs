@@ -102,18 +102,26 @@ namespace GYM_DAL.Migrations
 
             modelBuilder.Entity("GYM_DAL.Entities.ProductBillDetails", b =>
                 {
-                    b.Property<int>("ProductId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
                     b.Property<int>("BillInvoiceId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("ProductId", "BillInvoiceId");
+                    b.HasKey("Id");
 
                     b.HasIndex("BillInvoiceId");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("productBillDetails");
                 });
@@ -221,6 +229,12 @@ namespace GYM_DAL.Migrations
 
             modelBuilder.Entity("GYM_DAL.Entities.productPurchaseDetails", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
@@ -230,7 +244,9 @@ namespace GYM_DAL.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.HasKey("ProductId", "PurchaseInvoiceId");
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
 
                     b.HasIndex("PurchaseInvoiceId");
 

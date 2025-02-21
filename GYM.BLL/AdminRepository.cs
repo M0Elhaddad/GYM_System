@@ -1,4 +1,5 @@
-﻿using GYM_DAL;
+﻿using GYM_BLL.InterFace;
+using GYM_DAL;
 using GYM_DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,11 +10,18 @@ using System.Threading.Tasks;
 
 namespace GYM_BLL
 {
-    public class AdminRepository : GenericRepository<Admin>
+    public class AdminRepository : GenericRepository<Admin>,IAdminRepository
     {
+        private readonly GYMDbContext _dbContext;
+
         public AdminRepository(GYMDbContext dbContext) :base(dbContext)
         {
-            
+            _dbContext = dbContext;
+        }
+
+        public Admin? GetAdminByEmail(string email,string password)
+        {
+            return _dbContext.Admins.FirstOrDefault(A=>A.Email == email && A.Password == password);
         }
     }
 }

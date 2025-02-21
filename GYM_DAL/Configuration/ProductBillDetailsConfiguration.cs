@@ -19,7 +19,6 @@ namespace GYM_DAL.Configuration
             builder.HasOne(PB => PB.BillOfSale)
                 .WithMany(B => B.BillProductDetails)
                 .HasForeignKey(B => B.BillInvoiceId);
-            builder.HasKey(B => new {B.ProductId, B.BillInvoiceId});
         }
     }
 }
