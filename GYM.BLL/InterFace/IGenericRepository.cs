@@ -9,7 +9,7 @@ namespace GYM_BLL.InterFace
 {
     public interface IGenericRepository<T>:IDisposable where T : BaseEntity
     {
-        IEnumerable<T> GetAll(int id);
+        IEnumerable<T> GetAll();
         T? Get(int id);
         int Update(T entity);
         int Delete(T entity);

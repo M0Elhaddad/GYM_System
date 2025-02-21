@@ -8,12 +8,13 @@ namespace GYM_System
     public partial class Login : Form
     {
         private readonly AdminRepository _adminRepository;
-        private readonly GYMDbContext _dbContext = new GYMDbContext();
-        public Login()
+        private readonly GYMDbContext _dbContext;
+
+        public Login(GYMDbContext dbContext)
         {
             InitializeComponent();
-            _dbContext = new GYMDbContext();
-            _adminRepository = new AdminRepository(_dbContext);
+            _adminRepository = new AdminRepository(dbContext);
+            _dbContext = dbContext;
         }
 
         private void btn_close_Click(object sender, EventArgs e)
@@ -28,8 +29,7 @@ namespace GYM_System
 
             if (email != "" && password != "" && _adminRepository.GetAdminByEmail(email, password) != null)
             {
-                _adminRepository.Dispose();
-                Home home = new Home();
+                Home home = new Home(_dbContext);
                 home.Show();
                 Hide();
             }

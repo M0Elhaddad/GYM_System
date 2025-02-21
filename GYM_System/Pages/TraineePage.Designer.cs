@@ -28,46 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            btn_UpdateProduct = new Button();
-            btn_AddProduct = new Button();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            btn_UpdateTrainee = new Button();
+            btn_AddTrainee = new Button();
             label7 = new Label();
-            btn_DeleteProduct = new Button();
+            btn_DeleteTrainee = new Button();
             btn_Search = new Button();
             txt_Search = new TextBox();
             cmb_Category = new ComboBox();
             label2 = new Label();
-            dgv_Products = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgv_Products).BeginInit();
+            dgv_Trainee = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgv_Trainee).BeginInit();
             SuspendLayout();
             // 
-            // btn_UpdateProduct
+            // btn_UpdateTrainee
             // 
-            btn_UpdateProduct.FlatAppearance.MouseOverBackColor = Color.Navy;
-            btn_UpdateProduct.FlatStyle = FlatStyle.Flat;
-            btn_UpdateProduct.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btn_UpdateProduct.ForeColor = SystemColors.ActiveCaption;
-            btn_UpdateProduct.Location = new Point(408, 448);
-            btn_UpdateProduct.Margin = new Padding(3, 4, 3, 4);
-            btn_UpdateProduct.Name = "btn_UpdateProduct";
-            btn_UpdateProduct.Size = new Size(263, 55);
-            btn_UpdateProduct.TabIndex = 81;
-            btn_UpdateProduct.Text = "Update Product";
-            btn_UpdateProduct.UseVisualStyleBackColor = true;
+            btn_UpdateTrainee.FlatAppearance.MouseOverBackColor = Color.Navy;
+            btn_UpdateTrainee.FlatStyle = FlatStyle.Flat;
+            btn_UpdateTrainee.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            btn_UpdateTrainee.ForeColor = SystemColors.ActiveCaption;
+            btn_UpdateTrainee.Location = new Point(408, 448);
+            btn_UpdateTrainee.Margin = new Padding(3, 4, 3, 4);
+            btn_UpdateTrainee.Name = "btn_UpdateTrainee";
+            btn_UpdateTrainee.Size = new Size(263, 55);
+            btn_UpdateTrainee.TabIndex = 81;
+            btn_UpdateTrainee.Text = "Update Trainee";
+            btn_UpdateTrainee.UseVisualStyleBackColor = true;
             // 
-            // btn_AddProduct
+            // btn_AddTrainee
             // 
-            btn_AddProduct.FlatAppearance.MouseOverBackColor = Color.Navy;
-            btn_AddProduct.FlatStyle = FlatStyle.Flat;
-            btn_AddProduct.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btn_AddProduct.ForeColor = SystemColors.ActiveCaption;
-            btn_AddProduct.Location = new Point(117, 448);
-            btn_AddProduct.Margin = new Padding(3, 4, 3, 4);
-            btn_AddProduct.Name = "btn_AddProduct";
-            btn_AddProduct.Size = new Size(263, 55);
-            btn_AddProduct.TabIndex = 80;
-            btn_AddProduct.Text = "Add Product";
-            btn_AddProduct.UseVisualStyleBackColor = true;
+            btn_AddTrainee.FlatAppearance.MouseOverBackColor = Color.Navy;
+            btn_AddTrainee.FlatStyle = FlatStyle.Flat;
+            btn_AddTrainee.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            btn_AddTrainee.ForeColor = SystemColors.ActiveCaption;
+            btn_AddTrainee.Location = new Point(117, 448);
+            btn_AddTrainee.Margin = new Padding(3, 4, 3, 4);
+            btn_AddTrainee.Name = "btn_AddTrainee";
+            btn_AddTrainee.Size = new Size(263, 55);
+            btn_AddTrainee.TabIndex = 80;
+            btn_AddTrainee.Text = "Add Trainee";
+            btn_AddTrainee.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -76,23 +76,23 @@
             label7.ForeColor = SystemColors.ActiveCaption;
             label7.Location = new Point(462, 79);
             label7.Name = "label7";
-            label7.Size = new Size(173, 37);
+            label7.Size = new Size(165, 37);
             label7.TabIndex = 79;
-            label7.Text = "All Products";
+            label7.Text = "All Trainees";
             // 
-            // btn_DeleteProduct
+            // btn_DeleteTrainee
             // 
-            btn_DeleteProduct.FlatAppearance.MouseOverBackColor = Color.Navy;
-            btn_DeleteProduct.FlatStyle = FlatStyle.Flat;
-            btn_DeleteProduct.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btn_DeleteProduct.ForeColor = SystemColors.ActiveCaption;
-            btn_DeleteProduct.Location = new Point(700, 448);
-            btn_DeleteProduct.Margin = new Padding(3, 4, 3, 4);
-            btn_DeleteProduct.Name = "btn_DeleteProduct";
-            btn_DeleteProduct.Size = new Size(263, 55);
-            btn_DeleteProduct.TabIndex = 75;
-            btn_DeleteProduct.Text = "Delete Product";
-            btn_DeleteProduct.UseVisualStyleBackColor = true;
+            btn_DeleteTrainee.FlatAppearance.MouseOverBackColor = Color.Navy;
+            btn_DeleteTrainee.FlatStyle = FlatStyle.Flat;
+            btn_DeleteTrainee.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            btn_DeleteTrainee.ForeColor = SystemColors.ActiveCaption;
+            btn_DeleteTrainee.Location = new Point(700, 448);
+            btn_DeleteTrainee.Margin = new Padding(3, 4, 3, 4);
+            btn_DeleteTrainee.Name = "btn_DeleteTrainee";
+            btn_DeleteTrainee.Size = new Size(263, 55);
+            btn_DeleteTrainee.TabIndex = 75;
+            btn_DeleteTrainee.Text = "Delete Trainee";
+            btn_DeleteTrainee.UseVisualStyleBackColor = true;
             // 
             // btn_Search
             // 
@@ -115,7 +115,7 @@
             txt_Search.Location = new Point(777, 14);
             txt_Search.Margin = new Padding(3, 4, 3, 4);
             txt_Search.Name = "txt_Search";
-            txt_Search.PlaceholderText = "Search for Product";
+            txt_Search.PlaceholderText = "Search for Trainee";
             txt_Search.Size = new Size(209, 32);
             txt_Search.TabIndex = 77;
             // 
@@ -125,7 +125,7 @@
             cmb_Category.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmb_Category.ForeColor = SystemColors.ControlText;
             cmb_Category.FormattingEnabled = true;
-            cmb_Category.Location = new Point(230, 18);
+            cmb_Category.Location = new Point(176, 16);
             cmb_Category.Margin = new Padding(3, 4, 3, 4);
             cmb_Category.Name = "cmb_Category";
             cmb_Category.Size = new Size(204, 29);
@@ -138,65 +138,66 @@
             label2.ForeColor = SystemColors.ActiveCaption;
             label2.Location = new Point(4, 11);
             label2.Name = "label2";
-            label2.Size = new Size(220, 37);
+            label2.Size = new Size(163, 37);
             label2.TabIndex = 74;
-            label2.Text = "Select Category";
+            label2.Text = "Select Type";
             // 
-            // dgv_Products
+            // dgv_Trainee
             // 
-            dgv_Products.AllowUserToAddRows = false;
-            dgv_Products.AllowUserToResizeColumns = false;
-            dgv_Products.AllowUserToResizeRows = false;
-            dgv_Products.BackgroundColor = Color.FromArgb(0, 0, 20);
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(34, 40, 65);
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgv_Products.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgv_Products.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Products.Location = new Point(1, 120);
-            dgv_Products.Margin = new Padding(3, 4, 3, 4);
-            dgv_Products.MultiSelect = false;
-            dgv_Products.Name = "dgv_Products";
-            dgv_Products.RowHeadersWidth = 51;
-            dgv_Products.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgv_Products.Size = new Size(1094, 303);
-            dgv_Products.TabIndex = 73;
+            dgv_Trainee.AllowUserToAddRows = false;
+            dgv_Trainee.AllowUserToResizeColumns = false;
+            dgv_Trainee.AllowUserToResizeRows = false;
+            dgv_Trainee.BackgroundColor = Color.FromArgb(0, 0, 20);
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(34, 40, 65);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Trainee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgv_Trainee.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Trainee.Location = new Point(1, 120);
+            dgv_Trainee.Margin = new Padding(3, 4, 3, 4);
+            dgv_Trainee.MultiSelect = false;
+            dgv_Trainee.Name = "dgv_Trainee";
+            dgv_Trainee.RowHeadersWidth = 51;
+            dgv_Trainee.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv_Trainee.Size = new Size(1094, 303);
+            dgv_Trainee.TabIndex = 73;
             // 
-            // Trainee
+            // TraineePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 0, 20);
-            Controls.Add(btn_UpdateProduct);
-            Controls.Add(btn_AddProduct);
+            Controls.Add(btn_UpdateTrainee);
+            Controls.Add(btn_AddTrainee);
             Controls.Add(label7);
-            Controls.Add(btn_DeleteProduct);
+            Controls.Add(btn_DeleteTrainee);
             Controls.Add(btn_Search);
             Controls.Add(txt_Search);
             Controls.Add(cmb_Category);
             Controls.Add(label2);
-            Controls.Add(dgv_Products);
-            Name = "Trainee";
+            Controls.Add(dgv_Trainee);
+            Name = "TraineePage";
             Size = new Size(1097, 515);
-            ((System.ComponentModel.ISupportInitialize)dgv_Products).EndInit();
+            Load += TraineePage_Load;
+            ((System.ComponentModel.ISupportInitialize)dgv_Trainee).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btn_UpdateProduct;
-        private Button btn_AddProduct;
+        private Button btn_UpdateTrainee;
+        private Button btn_AddTrainee;
         private Label label7;
-        private Button btn_DeleteProduct;
+        private Button btn_DeleteTrainee;
         private Button btn_Search;
         private TextBox txt_Search;
         private ComboBox cmb_Category;
         private Label label2;
-        private DataGridView dgv_Products;
+        private DataGridView dgv_Trainee;
     }
 }

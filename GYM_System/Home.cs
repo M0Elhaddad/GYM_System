@@ -1,4 +1,5 @@
-﻿using GYM_System.Pages;
+﻿using GYM_DAL;
+using GYM_System.Pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace GYM_System
 {
     public partial class Home : Form
     {
-        public Home()
+        private readonly GYMDbContext _dbContext;
+
+        public Home(GYMDbContext dbContext)
         {
             InitializeComponent();
+            _dbContext = dbContext;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,14 +39,14 @@ namespace GYM_System
         }
         private void btn_GetProduct_Click(object sender, EventArgs e)
         {
-            TraineePage trainee = new TraineePage();
+            TraineePage trainee = new TraineePage(_dbContext);
             AddUserControl(trainee);
 
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
+            Login login = new Login(_dbContext);
             login.Show();
             this.Hide();
         }

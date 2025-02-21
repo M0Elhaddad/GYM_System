@@ -29,7 +29,7 @@ namespace GYM_BLL
             return _dbContext.SaveChanges();
 
         }
-        public IEnumerable<T> GetAll(int id)
+        public IEnumerable<T> GetAll()
         {
             return _dbContext.Set<T>().AsNoTracking().ToList();
         }
