@@ -12,7 +12,6 @@ namespace GYM_BLL
     {
         public TypeOfExerciseRepository(GYMDbContext dbContext) :base(dbContext)
         {
-            
         }
     }
 }

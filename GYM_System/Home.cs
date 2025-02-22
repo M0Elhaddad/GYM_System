@@ -15,7 +15,6 @@ namespace GYM_System
     public partial class Home : Form
     {
         private readonly GYMDbContext _dbContext;
-
         public Home(GYMDbContext dbContext)
         {
             InitializeComponent();
@@ -39,17 +38,12 @@ namespace GYM_System
         }
         private void btn_GetProduct_Click(object sender, EventArgs e)
         {
-            TraineePage trainee = new TraineePage(_dbContext);
+            TraineePage trainee = new TraineePage(_dbContext, pl_Containar);
             AddUserControl(trainee);
 
         }
 
-        private void btn_Logout_Click(object sender, EventArgs e)
-        {
-            Login login = new Login(_dbContext);
-            login.Show();
-            this.Hide();
-        }
+        
 
     }
 }

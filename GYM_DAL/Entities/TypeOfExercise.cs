@@ -11,5 +11,9 @@ namespace GYM_DAL.Entities
         public string Type { get; set; }
         public decimal Price { get; set; }
         public ICollection<Trainee> Trainees { get; set; } = new HashSet<Trainee>();
+        public override string ToString()
+        {
+            return $"{Type}";
+        }
     }
 }

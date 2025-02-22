@@ -18,6 +18,5 @@ namespace GYM_DAL.Entities
         public TypeOfSubscription TypeOfSubscription { get; set; }
         public TypeOfExercise TypeOfExercise { get; set; }
 
-
     }
 }

@@ -12,11 +12,9 @@ namespace GYM_BLL
 {
     public class AdminRepository : GenericRepository<Admin>,IAdminRepository
     {
-        private readonly GYMDbContext _dbContext;
-
         public AdminRepository(GYMDbContext dbContext) :base(dbContext)
         {
-            _dbContext = dbContext;
+            
         }
 
         public Admin? GetAdminByEmail(string email,string password)

@@ -12,7 +12,6 @@ namespace GYM_BLL
     {
         public TypeOfSubscriptionRepository(GYMDbContext dbContext) :base(dbContext)
         {
-            
         }
     }
 }

@@ -35,7 +35,6 @@
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
-            btn_Logout = new Button();
             btn_Category = new Button();
             btn_Users = new Button();
             btn_GetProduct = new Button();
@@ -112,7 +111,6 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(0, 0, 20);
-            panel2.Controls.Add(btn_Logout);
             panel2.Controls.Add(btn_Category);
             panel2.Controls.Add(btn_Users);
             panel2.Controls.Add(btn_GetProduct);
@@ -123,23 +121,6 @@
             panel2.Size = new Size(1109, 69);
             panel2.TabIndex = 36;
             // 
-            // btn_Logout
-            // 
-            btn_Logout.BackColor = Color.FromArgb(0, 0, 20);
-            btn_Logout.Dock = DockStyle.Right;
-            btn_Logout.FlatAppearance.MouseOverBackColor = Color.Navy;
-            btn_Logout.FlatStyle = FlatStyle.Flat;
-            btn_Logout.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
-            btn_Logout.ForeColor = SystemColors.ActiveCaption;
-            btn_Logout.Location = new Point(880, 0);
-            btn_Logout.Margin = new Padding(3, 4, 3, 4);
-            btn_Logout.Name = "btn_Logout";
-            btn_Logout.Size = new Size(229, 69);
-            btn_Logout.TabIndex = 28;
-            btn_Logout.Text = "LogOut";
-            btn_Logout.UseVisualStyleBackColor = false;
-            btn_Logout.Click += btn_Logout_Click;
-            // 
             // btn_Category
             // 
             btn_Category.BackColor = Color.FromArgb(0, 0, 20);
@@ -148,10 +129,10 @@
             btn_Category.FlatStyle = FlatStyle.Flat;
             btn_Category.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             btn_Category.ForeColor = SystemColors.ActiveCaption;
-            btn_Category.Location = new Point(458, 0);
+            btn_Category.Location = new Point(320, 0);
             btn_Category.Margin = new Padding(3, 4, 3, 4);
             btn_Category.Name = "btn_Category";
-            btn_Category.Size = new Size(229, 69);
+            btn_Category.Size = new Size(173, 69);
             btn_Category.TabIndex = 27;
             btn_Category.Text = "Categories";
             btn_Category.UseVisualStyleBackColor = false;
@@ -164,10 +145,10 @@
             btn_Users.FlatStyle = FlatStyle.Flat;
             btn_Users.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
             btn_Users.ForeColor = SystemColors.ActiveCaption;
-            btn_Users.Location = new Point(229, 0);
+            btn_Users.Location = new Point(159, 0);
             btn_Users.Margin = new Padding(3, 4, 3, 4);
             btn_Users.Name = "btn_Users";
-            btn_Users.Size = new Size(229, 69);
+            btn_Users.Size = new Size(161, 69);
             btn_Users.TabIndex = 26;
             btn_Users.Text = "Users";
             btn_Users.UseVisualStyleBackColor = false;
@@ -183,7 +164,7 @@
             btn_GetProduct.Location = new Point(0, 0);
             btn_GetProduct.Margin = new Padding(3, 4, 3, 4);
             btn_GetProduct.Name = "btn_GetProduct";
-            btn_GetProduct.Size = new Size(229, 69);
+            btn_GetProduct.Size = new Size(159, 69);
             btn_GetProduct.TabIndex = 25;
             btn_GetProduct.Text = "Trainee";
             btn_GetProduct.UseVisualStyleBackColor = false;
@@ -214,7 +195,6 @@
         private Label label2;
         private Label label1;
         private Panel panel2;
-        private Button btn_Logout;
         private Button btn_Category;
         private Button btn_Users;
         private Button btn_GetProduct;

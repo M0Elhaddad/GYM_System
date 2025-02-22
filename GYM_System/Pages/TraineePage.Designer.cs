@@ -33,11 +33,12 @@
             btn_AddTrainee = new Button();
             label7 = new Label();
             btn_DeleteTrainee = new Button();
-            btn_Search = new Button();
             txt_Search = new TextBox();
-            cmb_Category = new ComboBox();
+            cmb_Exercise = new ComboBox();
             label2 = new Label();
             dgv_Trainee = new DataGridView();
+            cmb_Subscription = new ComboBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgv_Trainee).BeginInit();
             SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             btn_UpdateTrainee.TabIndex = 81;
             btn_UpdateTrainee.Text = "Update Trainee";
             btn_UpdateTrainee.UseVisualStyleBackColor = true;
+            btn_UpdateTrainee.Click += btn_UpdateTrainee_Click;
             // 
             // btn_AddTrainee
             // 
@@ -68,6 +70,7 @@
             btn_AddTrainee.TabIndex = 80;
             btn_AddTrainee.Text = "Add Trainee";
             btn_AddTrainee.UseVisualStyleBackColor = true;
+            btn_AddTrainee.Click += btn_AddTrainee_Click;
             // 
             // label7
             // 
@@ -93,43 +96,32 @@
             btn_DeleteTrainee.TabIndex = 75;
             btn_DeleteTrainee.Text = "Delete Trainee";
             btn_DeleteTrainee.UseVisualStyleBackColor = true;
-            // 
-            // btn_Search
-            // 
-            btn_Search.FlatAppearance.MouseOverBackColor = Color.Navy;
-            btn_Search.FlatStyle = FlatStyle.Flat;
-            btn_Search.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Search.ForeColor = SystemColors.ActiveCaption;
-            btn_Search.Location = new Point(993, 14);
-            btn_Search.Margin = new Padding(3, 4, 3, 4);
-            btn_Search.Name = "btn_Search";
-            btn_Search.Size = new Size(86, 35);
-            btn_Search.TabIndex = 78;
-            btn_Search.Text = "Search";
-            btn_Search.UseVisualStyleBackColor = true;
+            btn_DeleteTrainee.Click += btn_DeleteTrainee_Click;
             // 
             // txt_Search
             // 
             txt_Search.BackColor = SystemColors.ControlLightLight;
             txt_Search.Font = new Font("Microsoft Uighur", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txt_Search.Location = new Point(777, 14);
+            txt_Search.Location = new Point(853, 79);
             txt_Search.Margin = new Padding(3, 4, 3, 4);
             txt_Search.Name = "txt_Search";
             txt_Search.PlaceholderText = "Search for Trainee";
             txt_Search.Size = new Size(209, 32);
             txt_Search.TabIndex = 77;
+            txt_Search.KeyUp += txt_Search_KeyUp;
             // 
-            // cmb_Category
+            // cmb_Exercise
             // 
-            cmb_Category.BackColor = Color.Cornsilk;
-            cmb_Category.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmb_Category.ForeColor = SystemColors.ControlText;
-            cmb_Category.FormattingEnabled = true;
-            cmb_Category.Location = new Point(176, 16);
-            cmb_Category.Margin = new Padding(3, 4, 3, 4);
-            cmb_Category.Name = "cmb_Category";
-            cmb_Category.Size = new Size(204, 29);
-            cmb_Category.TabIndex = 76;
+            cmb_Exercise.BackColor = Color.Cornsilk;
+            cmb_Exercise.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmb_Exercise.ForeColor = SystemColors.ControlText;
+            cmb_Exercise.FormattingEnabled = true;
+            cmb_Exercise.Location = new Point(233, 16);
+            cmb_Exercise.Margin = new Padding(3, 4, 3, 4);
+            cmb_Exercise.Name = "cmb_Exercise";
+            cmb_Exercise.Size = new Size(204, 29);
+            cmb_Exercise.TabIndex = 76;
+            cmb_Exercise.SelectionChangeCommitted += cmb_Exercise_SelectionChangeCommitted;
             // 
             // label2
             // 
@@ -138,9 +130,9 @@
             label2.ForeColor = SystemColors.ActiveCaption;
             label2.Location = new Point(4, 11);
             label2.Name = "label2";
-            label2.Size = new Size(163, 37);
+            label2.Size = new Size(223, 37);
             label2.TabIndex = 74;
-            label2.Text = "Select Type";
+            label2.Text = "Type of Exercise";
             // 
             // dgv_Trainee
             // 
@@ -165,19 +157,45 @@
             dgv_Trainee.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv_Trainee.Size = new Size(1094, 303);
             dgv_Trainee.TabIndex = 73;
+            dgv_Trainee.RowHeaderMouseClick += dgv_Trainee_RowHeaderMouseClick;
+            // 
+            // cmb_Subscription
+            // 
+            cmb_Subscription.BackColor = Color.Cornsilk;
+            cmb_Subscription.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmb_Subscription.ForeColor = SystemColors.ControlText;
+            cmb_Subscription.FormattingEnabled = true;
+            cmb_Subscription.Location = new Point(858, 16);
+            cmb_Subscription.Margin = new Padding(3, 4, 3, 4);
+            cmb_Subscription.Name = "cmb_Subscription";
+            cmb_Subscription.Size = new Size(204, 29);
+            cmb_Subscription.TabIndex = 83;
+            cmb_Subscription.SelectionChangeCommitted += cmb_Subscription_SelectionChangeCommitted;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold);
+            label1.ForeColor = SystemColors.ActiveCaption;
+            label1.Location = new Point(571, 11);
+            label1.Name = "label1";
+            label1.Size = new Size(281, 37);
+            label1.TabIndex = 82;
+            label1.Text = "Type of Subscription";
             // 
             // TraineePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 0, 20);
+            Controls.Add(cmb_Subscription);
+            Controls.Add(label1);
             Controls.Add(btn_UpdateTrainee);
             Controls.Add(btn_AddTrainee);
             Controls.Add(label7);
             Controls.Add(btn_DeleteTrainee);
-            Controls.Add(btn_Search);
             Controls.Add(txt_Search);
-            Controls.Add(cmb_Category);
+            Controls.Add(cmb_Exercise);
             Controls.Add(label2);
             Controls.Add(dgv_Trainee);
             Name = "TraineePage";
@@ -194,10 +212,11 @@
         private Button btn_AddTrainee;
         private Label label7;
         private Button btn_DeleteTrainee;
-        private Button btn_Search;
         private TextBox txt_Search;
-        private ComboBox cmb_Category;
+        private ComboBox cmb_Exercise;
         private Label label2;
         private DataGridView dgv_Trainee;
+        private ComboBox cmb_Subscription;
+        private Label label1;
     }
 }

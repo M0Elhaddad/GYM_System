@@ -12,7 +12,7 @@ namespace GYM_BLL
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
-        private readonly GYMDbContext _dbContext;
+        private protected readonly GYMDbContext _dbContext;
 
         public GenericRepository(GYMDbContext dbContext)
         {
@@ -29,7 +29,7 @@ namespace GYM_BLL
             return _dbContext.SaveChanges();
 
         }
-        public IEnumerable<T> GetAll()
+        public virtual IEnumerable<T> GetAll()
         {
             return _dbContext.Set<T>().AsNoTracking().ToList();
         }
